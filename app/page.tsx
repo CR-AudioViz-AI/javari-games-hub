@@ -1,7 +1,7 @@
 "use client";
 // app/page.tsx — Javari Games Hub · CR AudioViz AI · EIN 39-3646201 · May 2026
 import { useState } from "react";
-const T=[{"i": "\ud83c\udfae", "l": "Game Discovery", "d": "Find your next game", "h": "/discover"}, {"i": "\u2b50", "l": "Reviews", "d": "Read and write reviews", "h": "/reviews"}, {"i": "\ud83c\udfc6", "l": "Top Lists", "d": "Best games by genre", "h": "/top"}, {"i": "\ud83d\udc65", "l": "Community", "d": "Discuss with gamers", "h": "/community"}];
+const T=[{"i": "\ud83c\udfae", "l": "Discovery", "d": "Find your next game", "h": "/discover"}, {"i": "\u2b50", "l": "Reviews", "d": "Read and write reviews", "h": "/reviews"}, {"i": "\ud83c\udfc6", "l": "Top Lists", "d": "Best games by genre", "h": "/top"}, {"i": "\ud83d\udc65", "l": "Community", "d": "Discuss with gamers", "h": "/community"}];
 export default function P() {
   const [i,setI]=useState(""); const [o,setO]=useState(""); const [l,setL]=useState(false);
   async function go() { if(!i.trim())return; setL(true);setO("");
@@ -19,7 +19,7 @@ export default function P() {
     </section>
     <section style={{maxWidth:700,margin:"0 auto",padding:"24px 20px 0"}}>
       <div style={{background:"#0F1F32",border:"1px solid rgba(0,180,216,0.12)",borderRadius:14,padding:"18px 22px"}}>
-        <div style={{display:"flex",gap:8}}><input value={i} onChange={e=>setI(e.target.value)} onKeyDown={e=>e.key==="Enter"&&go()} placeholder="Recommend games similar to: Elden Ring with a preference for dark fantasy" style={{flex:1,background:"#172D48",border:"1px solid rgba(0,180,216,0.15)",borderRadius:8,padding:"10px 12px",color:"#e2e8f0",fontSize:13,outline:"none",fontFamily:"system-ui"}}/>
+        <div style={{display:"flex",gap:8}}><input value={i} onChange={e=>setI(e.target.value)} onKeyDown={e=>e.key==="Enter"&&go()} placeholder="Recommend games similar to Elden Ring with dark fantasy themes" style={{flex:1,background:"#172D48",border:"1px solid rgba(0,180,216,0.15)",borderRadius:8,padding:"10px 12px",color:"#e2e8f0",fontSize:13,outline:"none",fontFamily:"system-ui"}}/>
         <button onClick={go} disabled={l||!i.trim()} style={{background:l||!i.trim()?"#0F1F32":"#1E3A5F",color:l||!i.trim()?"#374151":"#00B4D8",border:"1px solid rgba(0,180,216,0.2)",borderRadius:8,padding:"10px 18px",fontSize:13,fontWeight:700,cursor:l||!i.trim()?"not-allowed":"pointer",fontFamily:"system-ui"}}>{l?"...":"Go"}</button></div>
         {o&&<pre style={{marginTop:12,padding:"12px",background:"rgba(0,180,216,0.05)",border:"1px solid rgba(0,180,216,0.1)",borderRadius:8,fontSize:13,color:"#e2e8f0",lineHeight:1.65,whiteSpace:"pre-wrap",fontFamily:"system-ui",maxHeight:300,overflowY:"auto",margin:"12px 0 0"}}>{o}</pre>}
       </div>
