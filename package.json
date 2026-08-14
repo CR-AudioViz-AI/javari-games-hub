@@ -1,7 +1,7 @@
 {
-  "name": "crav-games-hub",
+  "name": "javari-games-hub",
   "version": "1.0.0",
-  "description": "CR AudioViz AI Games Hub - Showcase Platform for Game Creators",
+  "description": "CR AudioViz AI Javari Games - Showcase Platform for Game Creators",
   "private": true,
   "scripts": {
     "dev": "next dev",
